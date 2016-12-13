@@ -1,0 +1,1 @@
+ mysql -u b17e70697e2374 -p3eaf2e91 -h eu-cdbr-west-01.cleardb.com --port=3306 -Dheroku_c71c74c67cde020

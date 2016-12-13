@@ -1,0 +1,6 @@
+{
+    'Python': {
+        'python': '/Users/barcelona/Documents/LosBarkitos/LosBarkitos/bin/python',
+        'pythonExtraPaths': ['/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac', '/Users/barcelona/Documents/LosBarkitos/LosBarkitos/bin', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/lib-tk', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-mac/lib-scriptpackages', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7', '/Users/barcelona/Documents/LosBarkitos/LosBarkitos/lib/python2.7', '/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/plat-darwin', '/Users/barcelona/Documents/LosBarkitos/LosBarkitos/lib/python2.7/lib-dynload', '/Users/barcelona/Documents/LosBarkitos/LosBarkitos/lib/python2.7/site-packages']
+    }
+}

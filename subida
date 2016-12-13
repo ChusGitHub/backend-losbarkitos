@@ -1,0 +1,6 @@
+#!/bin/bash
+clear
+git add .
+git commit -am "subida desde mini"
+git push origin master
+git push heroku master

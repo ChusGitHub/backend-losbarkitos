@@ -1,0 +1,10 @@
+# Ignones
+.DS_Store
+venv
+*.pyc
+*.pyo
+/bin
+/include
+/lib
+/share
+
