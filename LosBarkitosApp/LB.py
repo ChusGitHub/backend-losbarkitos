@@ -34,7 +34,7 @@ def LBinsertarViaje(request, precio, tipo, blanco):
 
 	viaje = Viaje(numero 		= num_viaje,
 				    precio		= precio,
-				    fecha  		= datetime.now() + timedelta(hours = 2),
+				    fecha  		= datetime.now() + timedelta(hours = 1),
 				    punto_venta = PuntoVenta.objects.get(codigo = 1), # siempre se vendera desde la oficina de MF
 				    barca		= TipoBarca.objects.get(codigo = tipo),
 				    vendedor 	= Vendedor.objects.get(codigo = 1), # por el mismo motivo
