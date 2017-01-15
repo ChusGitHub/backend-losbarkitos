@@ -12,7 +12,7 @@ def reserva(request, tipo, PV):
 		nombreTipo = "rio"
 	elif tipo == "2":
 		nombreTipo = "barca"
-	else:
+	elif tipo == "3":
 		nombreTipo = "gold"
 
 	# se recupera en numero de reserva desde la tabla control
@@ -42,9 +42,9 @@ def reserva(request, tipo, PV):
 	registro_reserva = Reserva(numero = numero,
 							   punto_venta = punto_venta,
 							   tipo_barca = t_barca,
-							   hora_reserva = (datetime.now() + timedelta(hours = 2)).isoformat(),
+							   hora_reserva = (datetime.now() + timedelta(hours = 1)).isoformat(),
 							   #hora_reserva = datetime.strftime(datetime.now() + timedelta(hours = 2), "%H:%M:%S"),
-							   hora_prevista = (datetime.now() + timedelta(hours = 2)).isoformat(),
+							   hora_prevista = (datetime.now() + timedelta(hours = 1)).isoformat(),
 							   fuera = False)
 
 	reservas = [0,0,0]
@@ -201,12 +201,10 @@ def listadoReservas(request, tipo):
 	tipo_barca = 0
 	if tipo == "Rio":
 		tipo_barca = 1
-	elif tipo == "Electrica":
+	elif tipo == "Barca":
 		tipo_barca = 2
-	elif tipo == "Whaly":
-		tipo_barca = 3
 	elif tipo == "Gold":
-		tipo_barca = 4
+		tipo_barca = 3
 
 	TB = TipoBarca.objects.get(codigo = tipo_barca)
 
