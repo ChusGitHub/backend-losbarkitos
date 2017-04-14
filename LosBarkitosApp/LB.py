@@ -264,5 +264,20 @@ def LBestadisticasTotales(request, diaI, mesI, anyoI, diaF, mesF, anyoF):
 	datos = {'error' : 0, 'total_tickets' : total_tickets, 'euros' : total_euros}
 	return HttpResponse(json.dumps(datos), 'application/json')
 
+def LBhayBarcas(request):
+	control = Control.objects.get()
+	rio =  int(control.num_reserva_rio)
+	elec = int(control.num_reserva_electrica)
+	gold = int(control.num_reserva_gold)
+	datos = {}
+
+	if  (rio + elec + gold) > 3:
+		datos = {'hayBarcas' : 'SI'}	
+	else:
+		datos = {'hayBarcas' : 'NO'}
+
+	return HttpResponse(json.dumps(datos), 'application/json')
+
+	
 
 

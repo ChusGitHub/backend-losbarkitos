@@ -7,7 +7,7 @@ from LosBarkitosApp.controlViaje import *
 from LosBarkitosApp.controlVendedor import ventaVendedor, vendedores
 from LosBarkitosApp.controlReserva import incrementarReserva, reserva, reserva_fuera, listadoReservas, posibleReserva, cierreDia, barcasDia, totalReservas
 from LosBarkitosApp.MF import MFinsertarTicket, MFinsertarTicketsMasivos, MFmodificarTicket, MFrecuperarTicket, MFborrarTicket, MFlistado, MFlistadoMensual, MFeuros, MFmedia, MFestadisticas
-from LosBarkitosApp.LB import LBlistado, LBlistadoB, LBestadisticas, LBestadisticasB, LBestadisticasTotales, LBestadisticasTotalesB, LBinsertarViaje, LBlistadoMensual, LBlistadoMensualB
+from LosBarkitosApp.LB import LBlistado, LBlistadoB, LBestadisticas, LBestadisticasB, LBestadisticasTotales, LBestadisticasTotalesB, LBinsertarViaje, LBlistadoMensual, LBlistadoMensualB, LBhayBarcas
 
 #from LosBarkitosApp.PA import PAinsertarTicket, PAlistado, PAestadisticas, PAlistadoMensual, PAlistado2, PArecuperarTicket, PAlistadoMensual
 
@@ -60,6 +60,7 @@ urlpatterns = patterns('',
     url(r'^LBestadisticasTotales/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/$', LBestadisticasTotales),
     url(r'^LBestadisticasTotalesB/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/(\d{1,2})/$', LBestadisticasTotalesB),
     url(r'^LBinsertar_viaje/(\d{1,})/([0123456])/([01])/$', LBinsertarViaje),
+    url(r'^LBhayBarcas/$', LBhayBarcas),
 
     #----------------------------------------------------------------------
     # URL para MarinaFerry
