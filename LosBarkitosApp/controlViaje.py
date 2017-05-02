@@ -185,9 +185,10 @@ def ultimoNumero(request, precio_ticket):
 			try:
 				#transaction.commit()
 				datos.save()
-			except:
+			except Exception, e:
 				#transaction.rollback()
-				data = {'error' : 'si', 'tipo error' : 'Error en la grabacion del Control de datos'}
+
+				data = {'error' : 'si', 'tipo error' : e.strerror}
 				return HttpResponse(json.dumps(data), 'application/json')
 
 	#Recupero el numero de reserva de la barca 
@@ -197,6 +198,7 @@ def ultimoNumero(request, precio_ticket):
 		jsonDict = json.dumps(dicc)
 	except Exception, e:
 		dicc['error'] = 'si'
+		dicc['descripcion error'] = e.strerror
 		jsonDict = json.dumps(dicc)
 
 	return HttpResponse(jsonDict, 'application/json')
